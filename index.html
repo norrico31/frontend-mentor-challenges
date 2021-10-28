@@ -3,36 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | 3-column preview card component</title>
+  <title>Frontend Mentor | E-commerce product page</title>
   <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-  <section class="container">
-    <div class="card">
-      <img src="./images/icon-sedans.svg" alt="" class="icon">
-      <h2>Sedans</h2>
-      <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
-        or on your next road trip.</p>
-        <button>Learn More</button>
+  <header class="container">
+    <nav class="mb-navbar">
+      <button class="mb-btn-close">
+        <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#757c82" fill-rule="evenodd"/></svg>
+      </button>
+      <ul>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="title-container">
+      <div class="burger-menu">
+      </div>
+      <h1><a href="#">sneakers</a></h1>
     </div>
-    <div class="card">
-      <img src="./images/icon-suvs.svg" alt="" class="icon">
-      <h2>SUVs</h2>
-      <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
-        and off-road adventures.</p>
-        <button>Learn More</button>
-    </div>
-    <div class="card">
-      <img src="./images/icon-luxury.svg" alt="" class="icon">
-      <h2>Luxury</h2>
-      <p> Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
-        rental and arrive in style.</p>
-        <button>Learn More</button>
-    </div>
+    <nav class="desktop-navbar">
+      <ul class="desktop-navbar-list">
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="info">
+        <li class="dropdown" data-dropdown>
+          <button class="link" data-dropdown-button></button>
+          <section class="cart-items">
+            <section class="cart-checkout">
+              <h2>Cart</h2>
+              <section class="cart-items-item">
+                <img src="./images/image-product-1-thumbnail.jpg">
+                <section class="cart-title-and-price">
+                  <p class="item-title">Fall Limited Edition Sneakers</p>
+                  <section class="cart-qty-price">
+                    <p class="item-price">$125.00 x</p>
+                    <p class="item-qty">3</p>
+                    <p class="total-price">$375.00</p>
+                  </section>
+                </section>
+                <button class="icon-trash"><img src="./images/icon-delete.svg" alt=""></button>
+              </section>
+              <button class="checkout-btn">Checkout</button>
+            </section>
+          </section>
+        </li>
+        <li>
+          <button class="link">
+            <img src="./images/image-avatar.png" class="avatar">
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- <main class="container">
+    <section class="img-box">
+      <section class="img-main">
+        <img src="./images/image-product-1.jpg" data-img-main>
+      </section>
+      <section class="img-list">
+        <div class="img-list-container">
+          <img src="./images/image-product-1-thumbnail.jpg">
+        </div>
+        <div class="img-list-container">
+          <img src="./images/image-product-2-thumbnail.jpg">
+        </div>
+        <div class="img-list-container">
+          <img src="./images/image-product-3-thumbnail.jpg">
+        </div>
+        <div class="img-list-container">
+          <img src="./images/image-product-4-thumbnail.jpg">
+        </div>
+      </section>
+    </section>
+    <section class="content">
+      <h3 class="sub-heading">SNEAKER COMPANY</h3>
+      <h2 class="main-heading">Fall Limited Edition Sneakers</h2>
+      <p class="text">These low-profi
+        le sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <section class="price">
+        <h4 class="main-price">$125.00</h4>
+        <span class="percent-price">50%</span>
+      </section>
+      <h5 class="original-price">$250.00</h5>
+      <section class="btns">
+        <div class="btn-counter">
+          <button>-</button>
+          <span>0</span>
+          <button>+</button>
+        </div>
+        <button class="add-to-cart">
+          <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#ffffff" fill-rule="nonzero"></path></svg>
+         <span>Add to cart</span>
+        </button>
+      </section>
+    </section>
+  </main>
+  <section class="modal" id="modal">
+    <section class="modal-img-box">
+      <button class="btn-close"><svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#ffffff" fill-rule="evenodd"/></svg></button>
+      <section class="modal-img-main">
+        <button class="prev">
+          <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#000000" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+        </button>
+        <img src="./images/image-product-1.jpg" id="slider">
+        <button class="next">
+          <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#000000" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+        </button>
+      </section>
+      <section class="img-list">
+        <div class="img-list-container">
+          <img src="./images/image-product-1-thumbnail.jpg">
+        </div>
+        <div class="img-list-container">
+          <img src="./images/image-product-2-thumbnail.jpg">
+        </div>
+        <div class="img-list-container">
+          <img src="./images/image-product-3-thumbnail.jpg">
+        </div>
+        <div class="img-list-container">
+          <img src="./images/image-product-4-thumbnail.jpg">
+        </div>
+      </section>
+    </section>
   </section>
-  </div>
+   -->
+  <script src="./index.js"></script>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
 </body>
 </html>

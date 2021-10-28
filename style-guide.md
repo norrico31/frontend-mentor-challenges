@@ -11,26 +11,25 @@ The designs were created to the following widths:
 
 ### Primary
 
-Bright orange: hsl(31, 77%, 52%)
-Dark cyan: hsl(184, 100%, 22%)
-Very dark cyan: hsl(179, 100%, 13%)
+- Orange: hsl(26, 100%, 55%)
+- Pale orange: hsl(25, 100%, 94%)
 
 ### Neutral
 
-Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
-Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+- Very vark blue: hsl(220, 13%, 13%)
+- Dark grayish blue: hsl(219, 9%, 45%)
+- Grayish blue: hsl(220, 14%, 75%)
+- Light grayish blue: hsl(223, 64%, 98%)
+- White: hsl(0, 0%, 100%)
+- Black (with 75% opacity for lightbox background): hsl(0, 0%, 0%)
 
 ## Typography
 
 ### Body Copy
 
-- Font size: 15px
+- Font size (paragraph): 16px
 
 ### Font
 
-- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
-- Weights: 400
-
-- Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
-- Weights: 700
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700
