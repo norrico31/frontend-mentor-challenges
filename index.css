@@ -542,7 +542,7 @@ main .content {
     }
     main {
         flex-direction: column;
-        padding: 0;
+        padding: 0 !important;
     }
     main .img-box,
     main .content {
@@ -605,7 +605,7 @@ main .content {
     }
     main {
         flex-direction: column;
-        padding: 0;
+        padding: 0 !important;
     }
     main .img-box,
     main .content {
@@ -641,19 +641,83 @@ main .content {
         margin-top: 20px;
     }
 }
-@media (max-width: 769px) {
+@media (max-width: 836px) {
     .container {
         max-width: 769px;
         width: 100%;
     }
     header {
-        padding: 0 20px;
+        padding: 0 20px !important;
+    }
+    header::before {
+        display: none;
     }
     ul.info {
         width: 110px;
     }
     .dropdown .cart-items {
         left: -257px;
+    }
+    main {
+        flex-direction: column;
+        padding: 0 !important;
+    }
+    main .img-box,
+    main .content {
+        width: 100%;
+    }
+    main .content {
+        padding: 20px 50px !important;
+    }
+    .img-main img {
+        width: 400px;
+        border-radius: 6;
+    }
+    .img-list {
+        display: none;
+    }
+    .content .text {
+        margin-bottom: 15px;
+    }
+    .content .main-heading {
+        font-size: 30px;
+        margin: 15px 0;
+    }
+    .content .price {
+       width: 100%;
+    }
+    .content .original-price {
+        margin-left: auto;
+    }
+    .btns {
+        margin-top: 15px;
+        flex-direction: column;
+    }.btns .btn-counter {
+        justify-content: space-between;
+    }
+    .btns .add-to-cart {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 991px) {
+    .container {
+        max-width: 991px;
+    }
+    header {
+        padding: 0 20px;
+    }
+    main {
+        padding: 50px 0;
+    }
+    main .content {
+        padding: 50px 10px;
+    }
+    .img-main img {
+        width: 400px;
+    }
+    .img-list {
+        width: 400px;
     }
 }
 @media (max-width: 1200px) {
@@ -673,12 +737,4 @@ main .content {
     .desktop-navbar {
         justify-content: flex-end;
     } 
-}
-@media (max-width: 991px) {
-    .container {
-        max-width: 991px;
-    }
-    header {
-        padding: 0 20px;
-    }
 }
