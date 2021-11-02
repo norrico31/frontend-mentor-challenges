@@ -150,6 +150,7 @@ nav.mb-navbar .mb-btn-close svg:hover path {
     align-items: center;
     justify-content: space-between;
 }
+
 .desktop-navbar-list,
 .info {
     display: flex;
@@ -159,8 +160,24 @@ nav.mb-navbar .mb-btn-close svg:hover path {
 .desktop-navbar-list {
     width: 400px;
 }
-.info {
-    width: 120px;
+.desktop-navbar-list li {
+    position: relative;
+}
+.desktop-navbar-list li:before {
+    content: '';
+    position: absolute;
+    bottom: -70px;
+    width: 100%;
+    height: 3px;
+    background: var(--orange);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+.desktop-navbar-list li:hover:before {
+    opacity: 1;
+    bottom: -43px;
+    pointer-events: all;
 }
 li {
     list-style: none;
@@ -169,10 +186,29 @@ li a {
     text-decoration: none;
     color: var(--dark-gray-blue);
 }
+.info {
+    width: 120px;
+}
 .dropdown {
     position: relative;
 }
+.dropdown span {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 20px;
+    height: 15px;
+    border-radius: 12px;
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 li .link {
+    position: relative;
     border: none;
     background: transparent;
     width: 100%;
@@ -180,14 +216,18 @@ li .link {
 }
 .dropdown .link {
     background: url('./images/icon-cart.svg') no-repeat center;
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
 }
 .link .avatar {
+    border-radius: 50%;
     width: 55px;
     height: 505x;
     cursor: pointer;
+}
+.link:hover .avatar {
+    border: 2px solid var(--orange);
 }
 .dropdown .cart-items {
     position: absolute;
