@@ -338,6 +338,9 @@ main .content {
     height: auto;
     border-radius: 10px;
 }
+.img-main button {
+    display: none;
+}
 .img-list {
     margin: 0 auto;
     width: 445px;
@@ -588,10 +591,16 @@ main .content {
     main .content {
         width: 100%;
     }
+    .img-main {
+        width: 375px !important;
+    }
     .img-main img {
-        max-width: 375px;
-        height: 300px;
-        border-radius: 0;
+        width: 100%;
+        border-radius: 0 !important;
+    }
+    .img-main button {
+        width: 35px !important;
+        height: 35px !important;
     }
     .img-list {
         display: none;
@@ -619,9 +628,9 @@ main .content {
         margin-top: 20px;
     }
 }
-@media (max-width: 449px) {
+@media (max-width: 400px) {
     .img-main img {
-        border-radius: 0px;
+        border-radius: 6px;
     }
 } 
 @media (max-width: 480px) {
@@ -653,13 +662,12 @@ main .content {
     }
     .img-main img {
         width: 450px;
-        border-radius: 6;
     }
     .img-list {
         display: none;
     }
-    main .content {
-        padding: 20px;
+    main section.content {
+        padding: 20px !important;
     }
     .content .main-heading {
         font-size: 30px;
@@ -707,7 +715,37 @@ main .content {
         width: 100%;
     }
     main .content {
-        padding: 20px 50px !important;
+        padding: 20px 70px !important;
+    }
+    .img-main {
+        width: 400px;
+        margin: 0 auto;
+    }
+    .img-main button {
+        position: absolute;
+        top: 50%;
+        background: var(--white);
+        border: none;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        cursor: pointer;
+        transform: translateY(-50%);
+        display: block;
+    }
+    .img-main .prev {
+        left: 20px;
+    }
+    .img-main .next {
+        right: 20px;
+    }
+    .img-main button svg path {
+        transition: 0.3s;
+    }
+    .img-main img {
+        max-width: 375px;
+        height: 300px;
+        border-radius: 6px;
     }
     .img-main img {
         width: 400px;
