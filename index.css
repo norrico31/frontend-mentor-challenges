@@ -636,7 +636,6 @@ main .content {
 @media (max-width: 480px) {
     .container {
         max-width: 480px;
-        width: 100%;
     }
     header {
         width: 100%;
@@ -692,9 +691,9 @@ main .content {
 @media (max-width: 836px) {
     .container {
         max-width: 769px;
-        width: 100%;
     }
     header {
+        width: 100%;
         padding: 0 20px !important;
     }
     header::before {
